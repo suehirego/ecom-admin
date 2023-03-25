@@ -1,0 +1,80 @@
+@import '../../global.scss';
+
+.home {
+    display: flex;
+    border: 0.2px solid lightgrey;
+
+    .homeContainer {
+        flex: 5;
+
+        @include large {
+            width: 100%;
+        }
+
+        @include tablet {
+            width: 100%;
+        }
+
+        @include phone {
+            width: 100%;
+        }
+
+        .widgets {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+
+            @include tablet {
+                padding: 10px;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            @include mobile {
+                padding: 10px;
+
+            }
+
+        }
+
+        .charts {
+            display: flex;
+            padding: 5px 20px;
+
+            @include tablet {
+                // width: 100%;
+                align-items: center;
+                justify-content: center;
+            }
+
+            @include mobile {
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            // @include phone{
+            //       width: 90%;    
+            // }
+        }
+
+        .tableCointainer {
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        .listTitle {
+            font-weight: 500;
+            color: gray;
+            margin-bottom: 15px;
+            color: rgba(106, 13, 173, 0.8);
+        }
+    }
+
+
+
+
+}

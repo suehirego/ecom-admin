@@ -1,0 +1,281 @@
+@import '../../global.scss';
+
+.single {
+    display: flex;
+    width: 100%;
+    border: 0.2px solid lightgrey;
+
+
+    .singleContainer {
+        flex: 6;
+        
+        @include large {
+            width: 100%;
+        }
+
+        @include tablet {
+            width: 100%;
+            flex-direction: column;
+        }
+
+        @include phone {
+            width: 100%;
+        }
+
+        .top {
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+            @include tablet {
+                width: 100%;
+                padding: 0px;
+                flex-direction: column;
+            }
+
+            .singleLeft {
+                flex: 2;
+                padding: 20px;
+                border-radius: 5px;
+                -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                position: relative;
+
+                .title{
+                    @include tablet {
+                        font-size: 20px;
+                    }
+                }
+
+                .item {
+                    display: flex;
+                    gap: 20px;
+
+                    .itemImg {
+                        height: 150px;
+                        width: 150px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        @include tablet {
+                            height: 60px;
+                            width: 70px;
+                        }
+                    }
+
+                    .itemDetails {
+                        margin-left: 30px;
+                        @include tablet {
+                            margin-left: 10px;
+                        }
+
+                        .detailsTitle {
+                            color: #555;
+                            margin-bottom: 12px;
+                        }
+
+                        .detailsItem {
+                            margin-bottom: 10px;
+                            font-size: 15px;
+                            display: flex;
+                            flex-direction: column;
+
+                            .itemKey {
+                                font-weight: bold;
+                                color: gray;
+                                margin-right: 10px;
+                            }
+
+                            .itemValue {
+                                font-weight: 300;
+                                margin-top: 12px;
+                            }
+                        }
+
+                        .detailsItem2 {
+                            margin-bottom: 10px;
+                            font-size: 15px;
+                            display: flex;
+                            align-items: center;
+                            gap: 20;
+                            @include tablet{
+                                gap: 6px;
+                            }
+
+                            .itemKey {
+                                font-weight: bold;
+                                color: gray;
+                                margin-right: 10px;
+                                @include tablet{
+                                    margin-right: 0px;
+                                }
+                            }
+
+                            .itemValue {
+                                font-weight: 300;
+                            }
+                        }
+                    }
+                
+                    
+                }
+
+                form {
+
+                    .itemForm {
+                        display: flex;
+                        flex-direction: column;
+                        @include tablet {
+                            display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                            justify-content: center;
+                        }
+                        
+                        .imgInput {
+                            top: 5px;
+
+                            @include tablet {
+                                top: 0px;
+                            }
+
+                            label {
+                                display: flex;
+                                align-items: center;
+                                gap: 20px;
+                                @include tablet{
+                                    margin-top: 10px;
+                                    font-size: 13px;
+                                }
+
+                                .icon {
+                                    font-size: 40px;
+                                }
+                            }
+
+                        }
+
+                        .rightImg {
+                            // text-align: center;
+                            margin: 30px 10px;
+                            @include tablet{
+                                margin: 10px 10px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+
+                            img {
+                                width: 100px;
+                                height: 100px;
+                                border-radius: 50%;
+                                margin-right: 180px;
+                                margin-top: -10px;
+                                object-fit: cover;
+                                @include tablet {
+                                    width: 80px;
+                                    height: 80px;
+                                    margin-top: 10px;
+                                    margin-right: 10px;
+                                }
+        
+                            }
+
+                        }
+
+                        .itemButton {
+                            width: 100px;
+                            padding: 10px;
+                            border: none;
+                            font-size: 16px;
+                            color: white;
+                            cursor: pointer;
+                            // margin-top: -10px;
+                            margin-left: 10px;
+                            border-radius: 5px;
+                            // position: absolute;
+                            background-color: #5BD1D7;
+                            @include tablet {
+                                margin-top: 10px;
+                                margin-left: 0px;
+                                position:inherit;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .singleRight {
+                flex:1;
+                padding: 40px;
+                border-radius: 5px;
+                -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                background-color: whitesmoke;
+                @include mobile{
+                    padding: 40px 20px;
+                }
+
+                form {
+                    .editForm {
+                        display: flex;
+                        flex-direction: column;
+                        // background-color: red;
+
+
+                        .formInput {
+                            // width: 100%;
+                            gap: 8px;
+                            display: flex;
+                            flex-direction: column;
+                            margin-top: 15px;
+
+                            label {
+                                font-size: 14px;
+                                @include mobile{
+                                    font-size: 16px;
+                                }
+                            }
+
+                            input {
+                                width: 350px;
+                                padding: 8px 5px;
+                                height: 40px;
+                                border: 0.5px solid lightgray;
+                                border-radius: 3px;
+                                color: gray;
+                                @include tablet {
+                                    width: 100%;
+                                }
+                                @include mobile {
+                                    width: 350px;
+                                    height: 50px;
+                                }
+                            }
+                        }
+
+                        .formButton {
+                            width: 250px;
+                            padding: 10px;
+                            border: none;
+                            font-size: 16px;
+                            color: white;
+                            cursor: pointer;
+                            margin-top: 40px;
+                            border-radius: 5px;
+                            align-self: center;
+                            background-color: #5BD1D7;
+                            @include tablet {
+                                width: 180px;
+                                margin-top: 20px;
+                            }
+                        }
+
+                    }
+
+                }
+
+            }
+        }
+    }
+
+    
+}

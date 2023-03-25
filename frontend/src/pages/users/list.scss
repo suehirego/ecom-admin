@@ -1,0 +1,10 @@
+.list{
+      display: flex;
+      width: 100%;
+      border: 0.2px solid lightgrey;
+
+      .listContainer{
+            flex: 6;
+            padding: 0px 0px 30px 0px;
+      }
+}

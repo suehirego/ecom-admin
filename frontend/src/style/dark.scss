@@ -1,0 +1,279 @@
+@import '../global.scss';
+
+.app.dark {
+    background-color: #192841;
+    color: rgba(156, 156, 156);
+
+    .navbar {
+        color: #8892b0;
+        border-color: #495670;
+        background-color: #192841;
+
+    }
+    
+    .menuIcon{
+        color: #64ffda;
+    }
+    .icon{
+        color: #64ffda;
+    }
+    p{
+        color: #64ffda;
+    }
+
+    .pastCahrt {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        .chartGrid {
+            stroke: rgb(228, 228, 228, 0.219);
+        }
+
+
+    }
+
+    .widget {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        .counter {
+            color: rgba(156, 156, 156);
+        }
+
+        .counter3 {
+            color: #64ffda;
+        }
+
+    }
+
+
+    .listTitle {
+        color: #64ffda;
+    }
+
+    .currentChart {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        .title {
+            color: #64ffda;
+        }
+
+        .summary {
+
+            .itemResult {
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+                font-size: 14px;
+
+                &.positive {
+                    color: green;
+                }
+
+                &.negative {
+                    color: #e44650;
+                }
+            }
+        }
+    }
+
+    .tableCointainer {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .table {
+        background-color: #23395d;
+        color: rgba(156, 156, 156);
+
+        .tableCell {
+            color: rgba(156, 156, 156);
+        }
+
+        .tableCellTitle {
+            color: rgba(156, 156, 156);
+            font-weight: 600;
+        }
+    }
+
+    .sidebar {
+        background-color: #192841;
+        color: rgba(156, 156, 156);
+        border-right: 0.3px solid #495670;
+
+        .logo {
+            color: #64ffda
+        }
+
+        .icon {
+            color: #64ffda;
+        }
+
+        span {
+            color: #8892b0;
+        }
+
+        hr {
+            border: 0.3px solid #495670;
+        }
+
+        ul {
+            li {
+                &:hover {
+                    background-color: rgba(100, 255, 218, 0.1);
+                }
+            }
+
+            .icon {
+                color: #5bd1d7;
+            }
+
+            span {
+                color: #5bd1d7;
+            }
+        }
+    }
+
+    .datatable {
+
+        .datatableTitle {
+            color: rgba(156, 156, 156);
+
+            .link {
+                color: #64ffda;
+                background-color: rgba(100, 255, 218, 0.105);
+                border: 1px solid #64ffda;
+            }
+        }
+
+        .datagrid {
+            color: rgba(156, 156, 156);
+            border: 1px solid #495670;
+        }
+
+        .viewButton {
+            color: #64ffda;
+            border: 1px dotted #64ffda;
+        }
+
+        .deleteButton {
+            color: #e44650;
+            border: 1px dotted #e4465184;
+        }
+
+        .cellWithStatus {
+            padding: 5px;
+            border-radius: 5px;
+
+            &.active {
+                background-color: #192841;
+                color: green;
+            }
+
+            &.pending {
+                background-color: #192841;
+                color: goldenrod;
+            }
+
+            &.passive {
+                background-color: #192841;
+                color: #e44650;
+            }
+        }
+    }
+
+    .newUserContainer {
+
+        .top,
+        .bottom {
+
+            -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+            h2 {
+                color: #64ffda;
+            }
+
+            form {
+                label {
+                    .icon {
+                        color: #64ffda;
+                    }
+                }
+
+                .formInput {
+                    width: 45%;
+                    margin-right: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+
+                }
+
+                input {
+                    background-color: transparent;
+                    border: 0.5px solid #8892b0;
+
+                    &:active,
+                    &:focus {
+                        border: 0.5px solid #8892b0;
+                        outline: none;
+                        background-color: transparent;
+                    }
+                }
+
+                button {
+                    color: #495670;
+                    background-color: #64ffda;
+                }
+            }
+
+        }
+    }
+
+    .singleContainer {
+
+        .left {
+            -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+            .editBtn {
+                color: #64ffda;
+                background-color: rgba(100, 255, 218, 0.1);
+            }
+
+            .item {
+                display: flex;
+                gap: 20px;
+
+                .itemDetails {
+
+                    .detailsTitle {
+                        color: #8892b0;
+                    }
+
+                    .itemValue {
+                        color: #8892b0;
+                    }
+
+                    .detailsItem {
+                        .itemKey {
+                            font-weight: bold;
+                            color: #8892b0;
+                            margin-right: 10px;
+                        }
+
+
+                    }
+                }
+            }
+        }
+
+        .title {
+            color: #64ffda;
+        }
+
+        .bottom {
+            -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+    }
+
+}

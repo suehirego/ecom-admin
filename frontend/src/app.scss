@@ -1,0 +1,40 @@
+@import "./global.scss";
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.app {
+   display: flex;
+   justify-content: center;
+
+   .container {
+      width: 1200px;
+      padding: 0px 40px;
+
+      @include extralarge {
+         // width: 1100px;
+      }
+
+      @include large {
+         // width: 960px;
+      }
+
+
+      @include tablet {
+         // max-width: 720px;
+      }
+
+      @include mobile {
+         // width: 576px;
+      }
+
+      @include phone {
+         width: 100%;
+         padding: 0px;
+      }
+
+   }
+}

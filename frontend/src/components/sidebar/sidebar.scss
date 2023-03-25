@@ -1,0 +1,91 @@
+@import '../../global.scss';
+
+.sidebar {
+   flex: 1.2;
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   position: relative;
+   padding-right: 20px;
+   border-right: 0.3px solid lightgray;
+   background-color: rgb(78, 222, 222);
+
+   @include extralarge {
+      display: none;
+   }
+
+   .sidebarFixed {
+      position: fixed;
+      flex: 1;
+      height: 100vh;
+
+      @include extralarge {
+         width: 155px;
+      }
+
+      .top {
+         height: 50px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+         .logo {
+            font-size: 18px;
+            font-weight: 800;
+            color: purple;
+
+            @include extralarge {
+               font-size: 16px;
+            }
+
+         }
+      }
+
+      .center {
+         gap: 20px;
+         padding-left: 20px;
+
+         ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 15px;
+            display: flex;
+            flex-direction: column;
+
+            li {
+               display: flex;
+               align-items: center;
+               padding: 5px;
+               cursor: pointer;
+
+               &:hover {
+                  background-color: rgba(228, 70, 80, 0.2);
+               }
+            }
+
+            .title {
+               font-size: 11px;
+               font-weight: bold;
+               color: #999;
+               margin-top: 15px;
+               margin-bottom: 5px;
+            }
+
+            .icon {
+               font-size: 18px;
+               color: rgba(106, 13, 173, 0.8);
+            }
+
+            span {
+               font-size: 16px;
+               font-weight: 500;
+               color: rgba(40, 40, 40, 0.5);
+               margin-left: 10px;
+            }
+         }
+
+      }
+
+   }
+}
