@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Damion&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    /* background-color: red; */
+}
+.subNavLink{
+    flex: 1.5;
+    height: 50px;
+    color: #282828;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}

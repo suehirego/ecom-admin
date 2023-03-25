@@ -1,24 +1,14 @@
-# Access
-
-Admin Email: sheboss123@gmail.com
-Admin Password: sheboss123  
-
-OR You can register a new account
 # Description
+Sheboss is an ecommerce full stack MERN application for marginalised women to sell their products. This project was inspired by "Sheboss Entreprenuership Program for Rural Women" run by Rego Foundation; a non profit Organisation empowering women in maginalised areas.
 
-ShebossAdmin is a full stack MERN Admin Panel for controlling sales and inventory made on the client side of ShebossClient(an e-commerce app).
+The app is picking data from a rest API  hosted on heroku
+(Nodejs, Express app)
 
-The app is picking data from a rest API hosted on heroku.
+
 ## Technologies Used;
-   1. SASS 
+   1. Styled Components 
    2. JavaScript
    3. React
-   4. Context API
-   5. Axios
-   6. Cloudinary for image storage
-
-
-## New Feature;
-   1. Dark Mode
-   2. React-Router-Dom v6
-
+   4. React Redux
+   5. Flutterwave-react-v3 for payments.
+  

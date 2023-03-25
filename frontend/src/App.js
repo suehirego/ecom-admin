@@ -1,116 +1,52 @@
-import React, { useContext } from 'react';
+import React from 'react';
+import './App.css'
 import {
-    BrowserRouter,
-    Routes,
+    BrowserRouter as Router,
+    Switch,
     Route,
-    Navigate
+    Redirect
 } from "react-router-dom";
-import Home from './pages/home/Home';
-import Login from './pages/home/Login';
-import NewUser from './pages/new/NewUser';
-import SingleUser from './pages/single/SingleUser';
-import SingleProduct from './pages/single/SingleProduct';
-import SingleOrder from './pages/single/SingleOrder';
-import NewOrder from './pages/new/NewOrder';
-import { userInputs, productInputs } from './formData';
-import './style/dark.scss';
-import './app.scss';
-import { DarkModeContext } from './context/darkModeContext';
-import { AuthContext } from './context/AuthContext';
-import Users from './pages/users/Users';
-import Products from './pages/products/Products';
-import Orders from './pages/orders/Orders';
-import NewPdt from './pages/new/NewPdt';
+//pages
+import Home from './pages/Home';
+import ProductList from './pages/ProductList';
+import SingleProduct from './pages/SingleProduct';
+import Login from './forms/Login';
+import Register from './forms/Register';
+import Cart from './pages/Cart';
+import { useSelector } from 'react-redux';
+
 
 
 const App = () => {
 
-    const { darkMode } = useContext(DarkModeContext);
-
-    const ProtectedRoute = ({ children }) => {
-        const { user } = useContext(AuthContext);
-
-        if (!user) {
-            return <Navigate to="/login" />;
-        }
-
-        return children;
-    };
-
+    const user = useSelector((state) => state.user.currentUser);
 
     return (
+        <div>
 
-        <div className={darkMode ? "app dark" : "app"}>
-            <div className='container'>
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/">
-                        <Route path="login" element={<Login />} />
-
-                        <Route index element={
-                            <ProtectedRoute>
-                                <Home />
-                            </ProtectedRoute>
-                        } />
-
-                        <Route path="users">
-                            <Route index element={
-                                <ProtectedRoute>
-                                    <Users />
-                                </ProtectedRoute>
-                            } />
-                            <Route path=":id" element={
-                                <ProtectedRoute>
-                                    <SingleUser inputs={userInputs} title="Update User" />
-                                </ProtectedRoute>
-                            } />
-                            <Route path="new" element={
-                                <ProtectedRoute>
-                                    <NewUser inputs={userInputs} title="Add New User" />
-                                </ProtectedRoute>
-                            } />
-                        </Route>
-
-                        <Route path="products">
-                            <Route index element={
-                                <ProtectedRoute>
-                                    <Products  />
-                                </ProtectedRoute>
-                            } />
-                            <Route path=":id" element={
-                                <ProtectedRoute>
-                                    <SingleProduct inputs={productInputs} title="Update Product" />
-                                </ProtectedRoute>
-                            } />
-                            <Route path="new" element={
-                                <ProtectedRoute>
-                                    <NewPdt inputs={productInputs} title="Add New Product"/>
-                                </ProtectedRoute>
-                            } />
-                        </Route>
-
-                        <Route path="orders">
-                            <Route index element={
-                                <ProtectedRoute>
-                                    <Orders />
-                                </ProtectedRoute>
-                            } />
-                            <Route path=":id" element={
-                                <ProtectedRoute>
-                                    <SingleOrder />
-                                </ProtectedRoute>
-                            } />
-                            <Route path="new" element={
-                                <ProtectedRoute>
-                                    <NewOrder />
-                                </ProtectedRoute>
-                            } />
-                        </Route>
-
+            <Router>
+                <Switch>
+                    <Route exact path="/">
+                        <Home/>
                     </Route>
-                </Routes>
-            </BrowserRouter>
-            </div>
+                    <Route  path="/products/:category">
+                        <ProductList/>
+                    </Route>
+                    <Route  path="/product/:id">
+                        <SingleProduct/>
+                    </Route>
+                    <Route  path="/cart">
+                        <Cart/>
+                    </Route>
+                    <Route  path="/login">
+                        {user ? <Redirect to="/" /> : <Login/>}
+                    </Route>
+                    <Route  path="/register">
+                        {user ? <Redirect to="/" /> : <Register/>}
+                    </Route>
+                    
+                </Switch>
+            </Router>
         </div>
     )
 }
